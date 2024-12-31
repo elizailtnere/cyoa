@@ -1,7 +1,41 @@
 def start():
-    print("Tu esi sagatavojies apzagt māju. Pirms sākt, tev jāizvēlas, kuru māju tu gribēsi apzagt.")
-    print("Izvēlies, kuru mājas īpašnieku tu vēlies apzagt:")
+    print("**********************************************")
+    print("Laipni lūdzam spēlē 'Mājas apzagšana'!")
+    print("Tu spēlēsi kā mājas zaglis, kura mērķis ir apzagt dažādas mājas, izvēloties no dažādiem īpašniekiem.")
+    print("Katrs īpašnieks ir citādāks, un katrai mājai ir savi izaicinājumi un drošības riski.")
+    print("Tavs uzdevums ir pieņemt pareizās izvēles un apzagt māju, izvairoties no aizdomīgiem cilvēkiem un trauksmes sistēmām.")
+    print("Tomēr esi uzmanīgs, jo katra tavu izvēļu sekas var būt atšķirīgas, un ne visas izvēles beidzas veiksmīgi!")
     
+    izvele = input("\nVai vēlies uzzināt spēles noteikumus un instrukcijas? (Jā/Nē)\nIzvēlies (Jā/Nē): ")
+
+    if izvele.lower() == "jā":
+        noteikumi()
+    elif izvele.lower() == "nē":
+        pasakot_vairs_uzsakt()
+    else:
+        print("Nederīga izvēle. Mēģini vēlreiz.")
+        start()
+
+# Spēles noteikumu paskaidrojums
+def noteikumi():
+    print("\n------------------------------------------")
+    print("Spēles noteikumi:")
+    print("1. Tu izvēlies, kuru māju tu vēlies apzagt. Katram īpašniekam ir savi izaicinājumi un ceļi, kā iekļūt mājā.")
+    print("2. Katru reizi, kad tu veic izvēli, tev būs jāizdara secīga izvēle, lai pārvarētu šķēršļus un sagūstītu vērtīgos priekšmetus.")
+    print("3. Tev ir jābūt uzmanīgam, jo dažas izvēles var novest pie aizturēšanas vai pat slēptiem zaudējumiem.")
+    print("4. Dažas izvēles var izbeigt spēli ar aizturēšanu, citas ļaus tev veiksmīgi iznāk no mājas ar mantām.")
+    print("5. Katrs īpašnieks ir atšķirīgs, tāpēc izvēles būs dažādas katram scenārijam.")
+    print("\nSpēlē galvenais ir pieņemt pareizās izvēles, lai iegūtu dārgumus un izvairītos no aizturēšanas!")
+    print("------------------------------------------")
+
+    izvele = input("\nKad esi gatavs, spied jebkuru taustiņu, lai uzsāktu spēli...")
+
+    pasakot_vairs_uzsakt()
+
+# Funkcija, kas uzsāk spēli, ja izvēlēts neapskatīt noteikumus
+def pasakot_vairs_uzsakt():
+    print("\nLieliski! Sāc spēli, izvēloties, kuru māju vēlies apzagt.")
+    print("Izvēlies kādu no mājas īpašniekiem:")
     izvele = input("1. Nabadzīga vecmāmiņa\n2. Baņķieris\n3. Slavenība - Kima Kardašiana\nIzvēlies (1/2/3): ")
 
     if izvele == "1":
@@ -12,7 +46,7 @@ def start():
         kim_kardashian()
     else:
         print("Nederīga izvēle. Mēģini vēlreiz.")
-        start()
+        pasakot_vairs_uzsakt()
 
 # Nabadzīga vecmāmiņa
 def vecmamina():

@@ -1,10 +1,15 @@
+<<<<<<< HEAD
 # Globālā mainīgā spēlētāja dzīvībām
+=======
+# Spēlētāja dzīvības
+>>>>>>> 2831d08ebba87bb4afd63074dbd0854c51505bb8
 dzivibas = 3
 
 def start():
     global dzivibas
     dzivibas = 3  # Atjauno dzīvības spēles sākumā
     print("**********************************************")
+<<<<<<< HEAD
     print("Laipni lūdzam spēlē 'Mājas apzagšana'!")
     print("Tu spēlēsi kā mājas zaglis, kura mērķis ir apzagt dažādas mājas, izvēloties no dažādiem īpašniekiem.")
     print("Katram īpašniekam ir savi izaicinājumi un riski, kā iekļūt mājā.")
@@ -12,6 +17,15 @@ def start():
     print("Tomēr esi uzmanīgs, katrai izvēlei ir sekas, un ne visas izvēles beidzas veiksmīgi!\n")
     
     izvele = input("Vai vēlies uzzināt spēles noteikumus un instrukcijas? (Jā/Nē)\n\nIzvēlies (Jā/Nē): ")
+=======
+    print("Laipni lūdzam spēlē 'Blēdīgais Jānis'!")
+    print("Tu domā, ka esi Mārvs no Viens pats mājās (tu neesi pat tik meistarīgs kā viņš, bet par to mēs aizmirstam), tādēļ vēlies apzagt dažādas mājas un tev ir vairākas iespējas ko apzagt.")
+    print("Katrs īpašnieks ir citādāks, un katrai mājai ir savi izaicinājumi un drošības riski.")
+    print("Tavs uzdevums ir pieņemt pareizās izvēles un apzagt māju, izvairoties no aizdomīgiem cilvēkiem un trauksmes sistēmām (jeb no Kevina).")
+    print("Tomēr esi uzmanīgs, jo katra tavu izvēļu sekas var būt atšķirīgas, un ne visas izvēles beidzas veiksmīgi. Neesi idiots!\n")
+    
+    izvele = input("Vai vēlies zināt spēles noteikumus un instrukcijas? (Jā/Nē)\n\nIzvēlies (Jā/Nē): ")
+>>>>>>> 2831d08ebba87bb4afd63074dbd0854c51505bb8
 
     if izvele.lower() == "jā":
         noteikumi()
@@ -27,6 +41,7 @@ def zaude_dzivibu():
     if dzivibas > 0:
         print(f"Nederīga izvēle. Tev ir palikušas {dzivibas} dzīvības. Mēģini vēlreiz.\n")
     else:
+<<<<<<< HEAD
         print("Tev beidzās dzīvības. Spēle beigusies!\n")
         restart = input("Vai vēlies atsākt spēli? (Jā/Nē): ")
         if restart.lower() == "jā":
@@ -34,17 +49,30 @@ def zaude_dzivibu():
         else:
             print("Uz redzēšanos!")
             exit()
+=======
+        print("Tevi pieķēra Kevins. Spēle beigusies!\n")
+        exit()
+>>>>>>> 2831d08ebba87bb4afd63074dbd0854c51505bb8
 
 # Spēles noteikumu paskaidrojums
 def noteikumi():
     print("------------------------------------------")
     print("Spēles noteikumi:")
+<<<<<<< HEAD
     print("1. Tu izvēlies, kuru māju vēlies apzagt. Katram īpašniekam ir savi izaicinājumi un ceļi, kā iekļūt mājā.")
     print("2. Katru reizi, kad tu veic izvēli, tev būs jāizdara secīga izvēle, lai pārvarētu šķēršļus un iegūtu vērtīgas mantas.")
     print("3. Esi uzmanīgs, jo dažas izvēles var novest pie aizturēšanas vai slēptiem zaudējumiem.")
     print("4. Dažas izvēles var beigt spēli ar aizturēšanu, bet citas ļaus tev veiksmīgi aizbēgt ar mantām.")
     print("5. Katrs īpašnieks ir atšķirīgs, tāpēc izvēles būs dažādas katram scenārijam.\n")
     print("Galvenais ir pieņemt pareizās izvēles, lai iegūtu dārgumus un izvairītos no aizturēšanas!\n")
+=======
+    print("1. Tu izvēlies, kuru māju tu vēlies apzagt. Katram īpašniekam ir savi izaicinājumi un ceļi, kā iekļūt mājā.")
+    print("2. Katru reizi, kad tu veic izvēli, tev būs jāizdara secīga izvēle, lai pārvarētu šķēršļus un nozagtu vērtīgos priekšmetus.")
+    print("3. Tev ir jābūt uzmanīgam, jo dažas izvēles var novest pie aizturēšanas vai pat slēptiem zaudējumiem.")
+    print("4. Dažas izvēles var izbeigt spēli ar aizturēšanu, citas ļaus tev veiksmīgi iznāk no mājas ar mantām.")
+    print("5. Katrs īpašnieks ir atšķirīgs, tāpēc izvēles būs dažādas katram scenārijam.\n")
+    print("Spēlē galvenais ir pieņemt pareizās izvēles, lai iegūtu dārgumus un izvairītos no aizturēšanas!\n")
+>>>>>>> 2831d08ebba87bb4afd63074dbd0854c51505bb8
     print("------------------------------------------")
 
     izvele = input("Kad esi gatavs, spied jebkuru taustiņu, lai uzsāktu spēli...\n")
@@ -90,7 +118,11 @@ def vecmamina():
         vecmamina()
 
 def viesis_stasts():
+<<<<<<< HEAD
     print("\nTu piesit pie durvīm un saki, ka esi radinieks, kas atnesis palīdzību. Viņa tev uzticas un ielaiž iekšā.")
+=======
+    print("\nTu piesit pie durvīm un saki, ka esi radinieks, kas atnesis vecmāmiņai palīdzību. Viņa tev uzticas un ielaiž iekšā.")
+>>>>>>> 2831d08ebba87bb4afd63074dbd0854c51505bb8
     print("\nIzvēles:\n")
     print("1. Mēģini apzagt viņu, kamēr viņa ir prom.")
     print("2. Pajautā, vai viņa var tev dot naudu.\n")
@@ -100,18 +132,26 @@ def viesis_stasts():
     if izvele == "1":
         apzagt_vecmaminu()
     elif izvele == "2":
-        nopecot_naudu()
+        dabut_naudu()
     else:
         zaude_dzivibu()
         viesis_stasts()
 
 def apzagt_vecmaminu():
     print("\nTu apzagji vecmāmiņu, bet viņa sāk kliegt un piezvana policijai. Tevi noķer!")
+<<<<<<< HEAD
     print("Spēles beigas! Tevi aiztur policija.\n")
 
 def nopecot_naudu():
     print("\nVecmāmiņa labprāt tev dod naudu, jo viņa nezin, ka tu esi zaglis. Tu aizbēdz ar naudu. Veiksmīgi!")
     print("Spēles beigas: Tu aizbēdz ar naudu.\n")
+=======
+    print("Beigas! Tevi aiztur policija.\n")
+
+def dabut_naudu():
+    print("\nVecmāmiņa labprāt tev dod naudu, jo viņa nezin, ka tu esi zaglis. Tu aizbrauc ar naudu un veic bēgšanu. Veiksmīgi!")
+    print("Beigas: Tu aizbēdz ar naudu.\n")
+>>>>>>> 2831d08ebba87bb4afd63074dbd0854c51505bb8
 
 # Baņķieris
 def bankieris():
@@ -135,6 +175,7 @@ def bankieris():
 
 def caur_logu():
     print("\nTu izlēmi iekļūt mājā pa logu. Tā ir sarežģīta izvēle, jo logs ir augstu, un tu vari viegli nokrist.")
+<<<<<<< HEAD
     print("Tu mēģini kāpt pa ārdurvīm, bet neturi līdzsvaru un nokrīti uz zemes! Spēle beigusies.")
     print("Spēles beigas: Tu nokriti un ievainojies.\n")
 
@@ -146,11 +187,28 @@ def durvju_viltus_stasts():
     print("\nTu nolem izdomāt viltus stāstu, ka esi izsists un meklē palīdzību. Vecmāmiņa uzticas tev, bet viņa ir pārāk laipna.")
     print("Viņa iepazīstina tevi ar visiem saviem dārgumiem, bet tev nākas pazust no viņas mājas, jo viņa sauc policiju!")
     print("Spēles beigas! Tevi noķer!\n")
+=======
+    print("Tu mēģini kāpt pa ārdurvīm, bet neturi līdzsvaru, un nokrīti uz zemes! Spēle beigusies.")
+    print("Beigas! Tu nokriti un ievainojies.\n")
+
+def caur_logu_bankieris():
+    print("\nTu mēģini iekļūt mājā pa logu, bet baņķiera mājā ir sarežģītas drošības sistēmas. Tu izsit logu, bet tas aktivizē trauksmi!")
+    print("Beigas! Tu esi noķerts!\n")
+
+def durvju_viltus_stasts():
+    print("\nTu nolem izdomāt viltus stāstu, ka esi ievainots un meklē palīdzību. Vecmāmiņa uzticas tev, bet viņa ir pārāk laipna.")
+    print("Viņa iepazīstina tevi ar visiem saviem dārgumiem, bet tev nākas pazust no viņas mājas, jo viņa sauc policiju!")
+    print("Beigas! Tevi noķer!\n")
+>>>>>>> 2831d08ebba87bb4afd63074dbd0854c51505bb8
 
 def durvju_stasts_bankierim():
     print("\nTu pie durvīm izdomā stāstu, ka esi piegādātājs. Baņķieris piekrīt tevi ielaist, bet viņš ir ļoti aizdomīgs.")
     print("Tevi noķer, kad tu mēģini apzagt viņu!")
+<<<<<<< HEAD
     print("Spēles beigas! Tu esi noķerts!\n")
+=======
+    print("Beigas! Tu esi noķerts!\n")
+>>>>>>> 2831d08ebba87bb4afd63074dbd0854c51505bb8
 
 def apzagt_bankieri():
     print("\nBaņķieris ir ļoti aizdomīgs un, kad tu mēģini apzagt viņu, viņš piespiež nospiest trauksmes pogu!")
@@ -169,12 +227,20 @@ def apzagt_bankieri():
         apzagt_bankieri()
 
 def aizbēgt_no_bankiera():
+<<<<<<< HEAD
     print("\nTu skrien prom un izbēg no mājas, bet policija tevi izseko un noķer. Spēle beigusies!")
     
 def samierinaties_ar_bankieri():
     print("\nBaņķieris piekrīt tev palīdzēt, bet viņa noslēptais aģents tevi noķer, un tu esi aizturēts. Spēle beigusies!\n")
 
 # Kima Kardašiana
+=======
+    print("\nTu bēdz un izkļūsti no mājas, bet policija tevi izseko un noķer. Beigas!\n")
+    
+def samierinaties_ar_bankieri():
+    print("\nBaņķieris piekrīt tev palīdzēt, bet viņam ir noslēpumaina aģenta palīdzība, un tu esi noķerts. Beigas!\n")
+
+>>>>>>> 2831d08ebba87bb4afd63074dbd0854c51505bb8
 def kim_kardashian():
     print("\nTu izvēlējies apzagt Kimu Kardašianu. Viņas māja ir ļoti dārga un pilna ar luksusa priekšmetiem.")
     print("Bet viņai ir ļoti laba drošība un daudz kameras. Esi uzmanīgs!\n")
@@ -207,3 +273,9 @@ def durvju_viltus_stasts_kim():
 def zvans_durvīs():
     print("\nTu zvani pie durvīm un saki, ka tev ir piegāde, bet apsargi ir aizdomīgi un tu esi noķerts!")
     print("Spēles beigas: Tu esi noķerts!\n")
+<<<<<<< HEAD
+=======
+    
+# Spēles sākums
+start()
+>>>>>>> 2831d08ebba87bb4afd63074dbd0854c51505bb8

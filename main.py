@@ -1,21 +1,21 @@
-# Global variable for player lives
+# Globālā mainīgā spēlētāja dzīvībām
 dzivibas = 3
 
 def start():
     global dzivibas
-    dzivibas = 3  # Reset lives at the start of the game
+    dzivibas = 3  # Atjauno dzīvības spēles sākumā
     print("**********************************************")
-    print("Welcome to the game 'House Robbery'!")
-    print("You play as a burglar whose goal is to rob different houses by choosing from different owners.")
-    print("Each owner has their own challenges and risks to enter the house.")
-    print("Your task is to make the right choices to rob the house while avoiding suspicious people and alarm systems.")
-    print("But be careful, every choice has consequences, and not all choices lead to success!\n")
+    print("Laipni lūdzam spēlē 'Mājas apzagšana'!")
+    print("Tu spēlēsi kā mājas zaglis, kura mērķis ir apzagt dažādas mājas, izvēloties no dažādiem īpašniekiem.")
+    print("Katram īpašniekam ir savi izaicinājumi un riski, kā iekļūt mājā.")
+    print("Tavs uzdevums ir pieņemt pareizās izvēles, lai apzagt māju, izvairoties no aizdomīgiem cilvēkiem un trauksmes sistēmām.")
+    print("Tomēr esi uzmanīgs, katrai izvēlei ir sekas, un ne visas izvēles beidzas veiksmīgi!\n")
     
-    izvele = input("Do you want to know the rules and instructions? (Yes/No)\n\nChoose (Yes/No): ")
+    izvele = input("Vai vēlies uzzināt spēles noteikumus un instrukcijas? (Jā/Nē)\n\nIzvēlies (Jā/Nē): ")
 
-    if izvele.lower() == "yes":
+    if izvele.lower() == "jā":
         noteikumi()
-    elif izvele.lower() == "no":
+    elif izvele.lower() == "nē":
         pasakot_vairs_uzsakt()
     else:
         zaude_dzivibu()
@@ -25,39 +25,39 @@ def zaude_dzivibu():
     global dzivibas
     dzivibas -= 1
     if dzivibas > 0:
-        print(f"Invalid choice. You have {dzivibas} lives left. Try again.\n")
+        print(f"Nederīga izvēle. Tev ir palikušas {dzivibas} dzīvības. Mēģini vēlreiz.\n")
     else:
-        print("You have run out of lives. The game is over!\n")
-        restart = input("Would you like to restart the game? (Yes/No): ")
-        if restart.lower() == "yes":
+        print("Tev beidzās dzīvības. Spēle beigusies!\n")
+        restart = input("Vai vēlies atsākt spēli? (Jā/Nē): ")
+        if restart.lower() == "jā":
             start()
         else:
-            print("Goodbye!")
+            print("Uz redzēšanos!")
             exit()
 
-# Game rules explanation
+# Spēles noteikumu paskaidrojums
 def noteikumi():
     print("------------------------------------------")
-    print("Game Rules:")
-    print("1. You choose which house you want to rob. Each owner has their own challenges and ways to enter the house.")
-    print("2. Every time you make a choice, you will need to make a sequence of decisions to overcome obstacles and get valuable items.")
-    print("3. Be careful, as some choices can lead to capture or hidden losses.")
-    print("4. Some choices can end the game with capture, while others will let you escape with the loot.")
-    print("5. Every owner is different, so the choices vary for each scenario.\n")
-    print("The key is to make the right decisions to get the treasures and avoid getting caught!\n")
+    print("Spēles noteikumi:")
+    print("1. Tu izvēlies, kuru māju vēlies apzagt. Katram īpašniekam ir savi izaicinājumi un ceļi, kā iekļūt mājā.")
+    print("2. Katru reizi, kad tu veic izvēli, tev būs jāizdara secīga izvēle, lai pārvarētu šķēršļus un iegūtu vērtīgas mantas.")
+    print("3. Esi uzmanīgs, jo dažas izvēles var novest pie aizturēšanas vai slēptiem zaudējumiem.")
+    print("4. Dažas izvēles var beigt spēli ar aizturēšanu, bet citas ļaus tev veiksmīgi aizbēgt ar mantām.")
+    print("5. Katrs īpašnieks ir atšķirīgs, tāpēc izvēles būs dažādas katram scenārijam.\n")
+    print("Galvenais ir pieņemt pareizās izvēles, lai iegūtu dārgumus un izvairītos no aizturēšanas!\n")
     print("------------------------------------------")
 
-    izvele = input("When you're ready, press any key to start the game...\n")
+    izvele = input("Kad esi gatavs, spied jebkuru taustiņu, lai uzsāktu spēli...\n")
     pasakot_vairs_uzsakt()
 
 def pasakot_vairs_uzsakt():
-    print("\nGreat! Start the game by choosing which house you want to rob.")
-    print("Choose one of the house owners:\n")
-    print("1. Poor Grandmother")
-    print("2. Banker")
-    print("3. Celebrity - Kim Kardashian\n")
+    print("\nLieliski! Sāc spēli, izvēloties, kuru māju vēlies apzagt.")
+    print("Izvēlies kādu no mājas īpašniekiem:\n")
+    print("1. Nabadzīga vecmāmiņa")
+    print("2. Baņķieris")
+    print("3. Slavenība - Kima Kardašiana\n")
     
-    izvele = input("Choose (1/2/3): ")
+    izvele = input("Izvēlies (1/2/3): ")
 
     if izvele == "1":
         vecmamina()
@@ -69,15 +69,15 @@ def pasakot_vairs_uzsakt():
         zaude_dzivibu()
         pasakot_vairs_uzsakt()
 
-# Poor Grandmother
+# Nabadzīga vecmāmiņa
 def vecmamina():
-    print("\nYou chose to rob a poor grandmother. The house is small and old, but the grandmother is very kind and cautious.")
-    print("\nChoices:\n")
-    print("1. Enter the house through the window.")
-    print("2. Enter through the door using a fake story.")
-    print("3. Knock on the door as a visitor.\n")
+    print("\nTu izvēlējies apzagt nabadzīgu vecmāmiņu. Māja ir maza un veca, bet vecmāmiņa ir ļoti laipna un aizsargāta.")
+    print("\nIzvēles:\n")
+    print("1. Iekļūt mājā pa logu.")
+    print("2. Iekļūt caur durvīm, izmantojot viltus stāstu.")
+    print("3. Mēģini piesist pie durvīm kā viesis.\n")
     
-    izvele = input("Choose (1/2/3): ")
+    izvele = input("Izvēlies (1/2/3): ")
     
     if izvele == "1":
         caur_logu()
@@ -90,12 +90,12 @@ def vecmamina():
         vecmamina()
 
 def viesis_stasts():
-    print("\nYou knock on the door and claim to be a relative bringing help. She trusts you and lets you in.")
-    print("\nChoices:\n")
-    print("1. Try to rob her while she's away.")
-    print("2. Ask if she can give you some money.\n")
+    print("\nTu piesit pie durvīm un saki, ka esi radinieks, kas atnesis palīdzību. Viņa tev uzticas un ielaiž iekšā.")
+    print("\nIzvēles:\n")
+    print("1. Mēģini apzagt viņu, kamēr viņa ir prom.")
+    print("2. Pajautā, vai viņa var tev dot naudu.\n")
     
-    izvele = input("Choose (1/2): ")
+    izvele = input("Izvēlies (1/2): ")
 
     if izvele == "1":
         apzagt_vecmaminu()
@@ -106,22 +106,22 @@ def viesis_stasts():
         viesis_stasts()
 
 def apzagt_vecmaminu():
-    print("\nYou robbed the grandmother, but she starts screaming and calls the police. You get caught!")
-    print("Game Over! You were arrested by the police.\n")
+    print("\nTu apzagji vecmāmiņu, bet viņa sāk kliegt un piezvana policijai. Tevi noķer!")
+    print("Spēles beigas! Tevi aiztur policija.\n")
 
 def nopecot_naudu():
-    print("\nThe grandmother kindly gives you money because she doesn't know you're a burglar. You escape with the money. Success!")
-    print("Game Over: You escaped with the money.\n")
+    print("\nVecmāmiņa labprāt tev dod naudu, jo viņa nezin, ka tu esi zaglis. Tu aizbēdz ar naudu. Veiksmīgi!")
+    print("Spēles beigas: Tu aizbēdz ar naudu.\n")
 
-# Banker
+# Baņķieris
 def bankieris():
-    print("\nYou chose to rob a banker. He lives in an expensive villa, and his house is full of valuable items.")
-    print("\nChoices:\n")
-    print("1. Enter through the door with a made-up story.")
-    print("2. Enter through the window.")
-    print("3. Try to rob him while he's away.\n")
+    print("\nTu izvēlējies apzagt baņķieri. Viņš dzīvo dārgā villā, un viņa māja ir pilna ar vērtīgiem priekšmetiem.")
+    print("\nIzvēles:\n")
+    print("1. Iekļūt mājā pa durvīm, izmantojot izdomātu stāstu.")
+    print("2. Iekļūt mājā pa logu.")
+    print("3. Mēģini apzagt viņu, kamēr viņš ir prom.\n")
     
-    izvele = input("Choose (1/2/3): ")
+    izvele = input("Izvēlies (1/2/3): ")
     
     if izvele == "1":
         durvju_stasts_bankierim()
@@ -134,31 +134,31 @@ def bankieris():
         bankieris()
 
 def caur_logu():
-    print("\nYou decided to enter through the window. It is a tricky choice because the window is high and you could easily fall.")
-    print("You try to climb the outer wall, but you lose your balance and fall to the ground! Game over.")
-    print("Game Over: You fell and got injured.\n")
+    print("\nTu izlēmi iekļūt mājā pa logu. Tā ir sarežģīta izvēle, jo logs ir augstu, un tu vari viegli nokrist.")
+    print("Tu mēģini kāpt pa ārdurvīm, bet neturi līdzsvaru un nokrīti uz zemes! Spēle beigusies.")
+    print("Spēles beigas: Tu nokriti un ievainojies.\n")
 
 def caur_logu_bankieris():
-    print("\nYou try to enter the house through the window, but the banker's house has advanced security systems. You break the window, but it activates an alarm!")
-    print("Game Over: You got caught!\n")
+    print("\nTu mēģini iekļūt mājā pa logu, bet baņķiera mājā ir sarežģītas drošības sistēmas. Tu izsit logu, bet tas aktivizē trauksmi!")
+    print("Spēles beigas: Tu esi noķerts!\n")
 
 def durvju_viltus_stasts():
-    print("\nYou decide to come up with a fake story that you were robbed and are looking for help. The grandmother trusts you, but she's too kind.")
-    print("She introduces you to all her valuables, but you have to leave quickly because she calls the police!")
-    print("Game Over: You got caught!\n")
+    print("\nTu nolem izdomāt viltus stāstu, ka esi izsists un meklē palīdzību. Vecmāmiņa uzticas tev, bet viņa ir pārāk laipna.")
+    print("Viņa iepazīstina tevi ar visiem saviem dārgumiem, bet tev nākas pazust no viņas mājas, jo viņa sauc policiju!")
+    print("Spēles beigas! Tevi noķer!\n")
 
 def durvju_stasts_bankierim():
-    print("\nAt the door, you make up a story that you're a delivery person. The banker agrees to let you in, but he's very suspicious.")
-    print("You get caught when you try to rob him!")
-    print("Game Over: You got caught!\n")
+    print("\nTu pie durvīm izdomā stāstu, ka esi piegādātājs. Baņķieris piekrīt tevi ielaist, bet viņš ir ļoti aizdomīgs.")
+    print("Tevi noķer, kad tu mēģini apzagt viņu!")
+    print("Spēles beigas! Tu esi noķerts!\n")
 
 def apzagt_bankieri():
-    print("\nThe banker is very suspicious and when you try to rob him, he presses the alarm button!")
-    print("\nChoices:\n")
-    print("1. Try to escape quickly.")
-    print("2. Try to calm the banker down by saying you need money.\n")
+    print("\nBaņķieris ir ļoti aizdomīgs un, kad tu mēģini apzagt viņu, viņš piespiež nospiest trauksmes pogu!")
+    print("\nIzvēles:\n")
+    print("1. Mēģini aizbēgt ātri.")
+    print("2. Mēģini samierināt baņķieri, apgalvojot, ka tev vajag naudu.\n")
     
-    izvele = input("Choose (1/2): ")
+    izvele = input("Izvēlies (1/2): ")
 
     if izvele == "1":
         aizbēgt_no_bankiera()
@@ -169,22 +169,22 @@ def apzagt_bankieri():
         apzagt_bankieri()
 
 def aizbēgt_no_bankiera():
-    print("\nYou run and escape from the house, but the police track you down and catch you. Game over!")
+    print("\nTu skrien prom un izbēg no mājas, bet policija tevi izseko un noķer. Spēle beigusies!")
     
 def samierinaties_ar_bankieri():
-    print("\nThe banker agrees to help you, but his mysterious agent friend catches you, and you get caught. Game over!\n")
+    print("\nBaņķieris piekrīt tev palīdzēt, bet viņa noslēptais aģents tevi noķer, un tu esi aizturēts. Spēle beigusies!\n")
 
-# Kim Kardashian
+# Kima Kardašiana
 def kim_kardashian():
-    print("\nYou chose to rob Kim Kardashian. Her house is very expensive and full of luxury items.")
-    print("But she has very good security and many cameras. Be careful!\n")
+    print("\nTu izvēlējies apzagt Kimu Kardašianu. Viņas māja ir ļoti dārga un pilna ar luksusa priekšmetiem.")
+    print("Bet viņai ir ļoti laba drošība un daudz kameras. Esi uzmanīgs!\n")
     
-    print("Choices:\n")
-    print("1. Try to break in through the basement.")
-    print("2. Enter through the front door with a fake story.")
-    print("3. Try to ring the doorbell and say you have a delivery.\n")
+    print("Izvēles:\n")
+    print("1. Mēģini iekļūt pa pagrabu.")
+    print("2. Iekļūt pa galvenajām durvīm, izmantojot viltus stāstu.")
+    print("3. Mēģini zvanīt pie durvīm un teikt, ka tev ir piegāde.\n")
     
-    izvele = input("Choose (1/2/3): ")
+    izvele = input("Izvēlies (1/2/3): ")
     
     if izvele == "1":
         pagraba_ielauzums()
@@ -197,13 +197,13 @@ def kim_kardashian():
         kim_kardashian()
 
 def pagraba_ielauzums():
-    print("\nYou try to break in through the basement, but there are modern security systems. You manage to get in, but the alarm goes off!")
-    print("Game Over: You got caught by the guards!\n")
+    print("\nTu mēģini ielauzties pa pagrabu, bet tur ir modernās drošības sistēmas. Tev izdodas iekļūt, bet trauksme tiek aktivizēta!")
+    print("Spēles beigas: Tu esi noķerts apsargiem!\n")
 
 def durvju_viltus_stasts_kim():
-    print("\nYou try to enter through the front door with a fake story, but Kim's security staff is too professional and catches you!")
-    print("Game Over: You got caught!\n")
+    print("\nTu mēģini iekļūt pa durvīm ar viltus stāstu, bet Kimas drošības personāls ir pārāk profesionāls un tevi noķer!")
+    print("Spēles beigas: Tu esi noķerts!\n")
 
 def zvans_durvīs():
-    print("\nYou ring the doorbell and tell them you have a delivery, but the guards are suspicious and you get caught!")
-    print("Game Over: You got caught!\n")
+    print("\nTu zvani pie durvīm un saki, ka tev ir piegāde, bet apsargi ir aizdomīgi un tu esi noķerts!")
+    print("Spēles beigas: Tu esi noķerts!\n")

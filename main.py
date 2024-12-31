@@ -26,8 +26,18 @@ def zaude_dzivibu():
     dzivibas -= 1
     if dzivibas > 0:
         print(f"Nederīga izvēle. Tev ir palikušas {dzivibas} dzīvības. Mēģini vēlreiz.\n")
+        atkārtot_spelet()  # Piedāvāt spēlētājam vēlreiz spēlēt
     else:
         print("Tevi pieķēra Kevins. Spēle beigusies!\n")
+        exit()
+
+def atkārtot_spelet():
+    izvele = input("Vai vēlies mēģināt vēlreiz? (Jā/Nē): ")
+    if izvele.lower() == "jā":
+        dzivibas = 3  # Atjauno dzīvības
+        pasakot_vairs_uzsakt()  # Turpina spēli no vietas, kur apstājās
+    else:
+        print("Paldies, ka spēlēji! Spēle beigusies.\n")
         exit()
 
 # Spēles noteikumu paskaidrojums
@@ -103,6 +113,7 @@ def viesis_stasts():
 def apzagt_vecmaminu():
     print("\nTu apzagji vecmāmiņu, bet viņa sāk kliegt un piezvana policijai. Tevi noķer!")
     print("Beigas! Tevi aiztur policija.\n")
+    zaude_dzivibu()
 
 def dabut_naudu():
     print("\nVecmāmiņa labprāt tev dod naudu, jo viņa nezin, ka tu esi zaglis. Tu aizbrauc ar naudu un veic bēgšanu. Veiksmīgi!")
@@ -132,20 +143,24 @@ def caur_logu():
     print("\nTu izlēmi iekļūt mājā pa logu. Tā ir sarežģīta izvēle, jo logs ir augstu, un tu vari viegli nokrist.")
     print("Tu mēģini kāpt pa ārdurvīm, bet neturi līdzsvaru, un nokrīti uz zemes! Spēle beigusies.")
     print("Beigas! Tu nokriti un ievainojies.\n")
+    zaude_dzivibu()
 
 def caur_logu_bankieris():
     print("\nTu mēģini iekļūt mājā pa logu, bet baņķiera mājā ir sarežģītas drošības sistēmas. Tu izsit logu, bet tas aktivizē trauksmi!")
     print("Beigas! Tu esi noķerts!\n")
+    zaude_dzivibu()
 
 def durvju_viltus_stasts():
     print("\nTu nolem izdomāt viltus stāstu, ka esi ievainots un meklē palīdzību. Vecmāmiņa uzticas tev, bet viņa ir pārāk laipna.")
     print("Viņa iepazīstina tevi ar visiem saviem dārgumiem, bet tev nākas pazust no viņas mājas, jo viņa sauc policiju!")
     print("Beigas! Tevi noķer!\n")
+    zaude_dzivibu()
 
 def durvju_stasts_bankierim():
     print("\nTu pie durvīm izdomā stāstu, ka esi piegādātājs. Baņķieris piekrīt tevi ielaist, bet viņš ir ļoti aizdomīgs.")
     print("Tevi noķer, kad tu mēģini apzagt viņu!")
     print("Beigas! Tu esi noķerts!\n")
+    zaude_dzivibu()
 
 def apzagt_bankieri():
     print("\nBaņķieris ir ļoti aizdomīgs un, kad tu mēģini apzagt viņu, viņš piespiež nospiest trauksmes pogu!")
@@ -165,9 +180,11 @@ def apzagt_bankieri():
 
 def aizbēgt_no_bankiera():
     print("\nTu bēdz un izkļūsti no mājas, bet policija tevi izseko un noķer. Beigas!\n")
-    
+    zaude_dzivibu()
+
 def samierinaties_ar_bankieri():
     print("\nBaņķieris piekrīt tev palīdzēt, bet viņam ir noslēpumaina aģenta palīdzība, un tu esi noķerts. Beigas!\n")
+    zaude_dzivibu()
 
 def kim_kardashian():
     print("\nTu izvēlējies apzagt Kimu Kardašianu. Viņas māja ir ļoti dārga un pilna ar luksusa priekšmetiem.")
@@ -193,14 +210,19 @@ def kim_kardashian():
 def pagraba_ielauzums():
     print("\nTu mēģini ielauzties pa pagrabu, bet tur ir modernās drošības sistēmas. Tev izdodas iekļūt, bet trauksme tiek aktivizēta!")
     print("Spēles beigas: Tu esi noķerts apsargiem!\n")
+    zaude_dzivibu()
 
 def durvju_viltus_stasts_kim():
     print("\nTu mēģini iekļūt pa durvīm ar viltus stāstu, bet Kimas drošības personāls ir pārāk profesionāls un tevi noķer!")
     print("Spēles beigas: Tu esi noķerts!\n")
+    zaude_dzivibu()
 
 def zvans_durvīs():
     print("\nTu zvani pie durvīm un saki, ka tev ir piegāde, bet apsargi ir aizdomīgi un tu esi noķerts!")
     print("Spēles beigas: Tu esi noķerts!\n")
-    
+    zaude_dzivibu()
+
 # Spēles sākums
 start()
+
+

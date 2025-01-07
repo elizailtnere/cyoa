@@ -181,6 +181,7 @@ def bankieris_durvis():
     print("\nTu izvēlies pieiet pie durvīm un ieiet iekšā, izmantojot izdomātu stāstu. Baņķieris tev uzticas un ļauj ienākt.")
     print("Iekļūsti mājā un paņem dārgumus.\n")
     print("Veiksmīgi apzagts!\n")
+    spēlēt_vēlreiz()
 
 def bankieris_logu():
     print("\nTu mēģini iekļūt pa logu, bet tas ir pārāk sarežģīti. Baņķieris tevi noķer!")
@@ -209,7 +210,7 @@ def kim_kardashian():
 
 def kim_pakalpotajs():
     print("\nTu izmanto pakalpotāju un izkļūsti ar vērtīgām mantām. Veiksmīgi!\n")
-    exit()
+    spēlēt_vēlreiz()
 
 def kim_viltus_stasts():
     print("\nTu piezvani pie durvīm un izdomā stāstu, bet Kim neuzticas un zvana drošības dienestam. Tu tiek aizturēts!\n")
@@ -220,10 +221,20 @@ def kim_viltus_stasts():
 def caur_logu():
     print("\nTu mēģini iekļūt mājā pa logu, bet durvis ir pārāk aizsargātas. Tu izsist logu un ieej iekšā.")
     print("Tev izdodas iegūt dārgumus un aizbēgt bez aizķeršanās.\n")
+    spēlēt_vēlreiz()
 
 def durvju_viltus_stasts():
     print("\nTu pieklauvēji pie durvīm un saki, ka esi radinieks, kas atnesis vecmāmiņai zāles. Viņa tev uzticas un ielaiž iekšā.")
     print("Tev izdodas apzagt viņu, un tu bēdz projām.\n")
+    spēlēt_vēlreiz()
+
+def spēlēt_vēlreiz():
+    izvele = input("Vai vēlies spēlēt vēlreiz? (Jā/Nē): ")
+    if izvele.lower() == "jā":
+        start()
+    else:
+        print("Paldies, ka spēlēji! Spēle beigusies.\n")
+        exit()
 
 # Spēles sākums
 start()

@@ -60,7 +60,7 @@ def melot_tiesa():
 def aizbildinaties_tiesa():
     print("\nTu stāsti tiesnesim par saviem smagajiem apstākļiem. Viņš izrāda sapratni un piespriež maigāku sodu.")
     print("Tu saņem nosacītu sodu un esi brīvībā, bet tev ir jābūt piesardzīgam nākotnē.")
-    print("Spēles beigas: Tu izvairies no cietuma, bet sabiedrība tevi uzrauga.\n")
+    print("Spēles beigas: Tu izvairies no cietuma.\n")
     exit()
 
 def atzit_vainu_tiesa():
